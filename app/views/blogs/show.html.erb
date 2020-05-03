@@ -3,9 +3,9 @@
     <%= link_to "CARAVAN", blogs_path %>
   </h1>
   <div class="social">
-    <i class="fa fa-facebook-square"></i>
-    <i class="fa fa-twitter-square"></i>
-    <i class="fa fa-instagram"></i>
+    <i class="fab fa-facebook-square"></i>
+    <i class="fab fa-twitter-square"></i>
+    <i class="fab fa-instagram"></i>
   </div>
 </header>
 
@@ -45,7 +45,7 @@
           <%= @blog.category %>
         </p>
         <p class="blog-date">
-          <5= @blog.created_at %>
+          <%= @blog.created_at %>
         </p>
       </div>
 
@@ -54,8 +54,8 @@
         <%= @blog.body %>
       </p>
 
-      <a href="#">編集</a>
-      <a href="#">削除</a>
+      <%= link_to "編集", edit_blog_path(@blog) %>
+      <%= link_to "削除",blog_path(@blog), method: :delete %>
 
       <div class="author-case clearfix">
         <div class="author-image"></div>
